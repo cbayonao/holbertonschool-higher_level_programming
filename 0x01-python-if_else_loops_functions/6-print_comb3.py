@@ -4,6 +4,6 @@ for a in range(0, 100):
     y = a % 10
 
     if x != y and x < y and a != 89:
-        print("{}, ".format(a), end='')
+        print("{:02d}, ".format(a), end='')
     if a == 89:
         print("{}".format(a))
