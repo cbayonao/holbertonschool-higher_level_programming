@@ -5,11 +5,10 @@ if number > 0:
     ult = number % 10
 else:
     ult = number % -10
+print("Last digit of", number, "is", ult, end=" ")
 if ult == 0:
-    print("Last digit of {0} is {1} and is 0".format(number, ult))
+    print("and is 0")
 elif ult > 5:
-    print("Last digit of {0} is {1} and is greater than 5".format(number, ult))
-elif ult < 6:
-    print("Last digit of {0} is {1}\
-    and is less than 6 and not 0".format(number, ult))
-
+    print("and is greater than 5")
+elif ult < 6 and ult != 0:
+    print("and is less than 6 and not 0")
