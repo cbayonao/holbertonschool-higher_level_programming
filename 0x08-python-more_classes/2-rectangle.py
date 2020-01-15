@@ -1,21 +1,22 @@
 #!/usr/bin/python3
-"""1-rectangle class
+"""2-rectangle class
 """
 
 
 class Rectangle:
-    """Define a rectangle
+    """Method to config
     """
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
-    """get width
+        self.width = width
+        self.height = height
+
+    """config width
     """
     @property
     def width(self):
         return self.__width
 
-    """config width
+    """get width
     """
     @width.setter
     def width(self, value):
@@ -25,13 +26,14 @@ class Rectangle:
             raise NameError("width must be an integer")
         elif value < 0:
             raise NameError("width must be >= 0")
-    """config heigth
+
+    """get heigth
     """
     @property
     def height(self):
         return self.__height
 
-    """set height
+    """config height
     """
     @height.setter
     def height(self, value):
@@ -41,4 +43,18 @@ class Rectangle:
             raise NameError("height must be an integer")
         elif value < 0:
             raise NameError("height must be >= 0")
+
+    """get the Area
+    """
+    def area(self):
+        return self.__height*self.__width
+
+    """get the Perimeter
+    """
+    def perimeter(self):
+        if self.__height == 0 or self.__width == 0:
+            self.__perimeter = 0
+        else:
+            self.__perimeter = 2 * (self.__height + self.__width)
+        return self.__perimeter
 
