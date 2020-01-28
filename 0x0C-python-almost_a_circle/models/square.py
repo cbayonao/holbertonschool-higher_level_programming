@@ -53,7 +53,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
             """
-            Args Update
+            Adding the public method
+            def update(self, *args, **kwargs) that assigns attributes:
             """
             if args:
                 for i in range(len(args)):
