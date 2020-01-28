@@ -32,10 +32,3 @@ def __str__(self):
         s = "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.__width)
         return s
-
-@property
-    def size(self):
-        """
-        size
-        """
-        return self.__width
