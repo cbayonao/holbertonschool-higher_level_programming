@@ -133,3 +133,18 @@ class Rectangle(Base):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Adding the public method that returns the
+        dictionary representation of a Rectangle
+        """
+        def to_dictionary(self):
+            """
+        Dict Rep of Rectangle Class
+        """
+        mydict = {}
+        attri = ['x', 'y', 'id', 'width', 'height']
+        for key in attri:
+            mydict.update({key: getattr(self, key)})
+        return mydict
