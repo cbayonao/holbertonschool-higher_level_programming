@@ -35,4 +35,7 @@ def __str__(self):
 
 @property
     def size(self):
+        """
+        size
+        """
         return self.__width
