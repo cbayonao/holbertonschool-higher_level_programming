@@ -11,7 +11,7 @@ if __name__ == '__main__':
                              db=sys.argv[3])
         cur = db.cursor()
         cur.execute("SELECT * FROM states WHERE name=%s"
-                "ORDER BY states.id ASC", (sys.argv[4],))
+                "ORDER BY states.id ASC", (sys.argv[4]))
         m = cur.fetchall()
         for state in m:
             print(state)
