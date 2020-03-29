@@ -17,9 +17,8 @@ if __name__ == "__main__":
 
         Base.metadata.create_all(eng)
         session = Session(eng)
-        for state_to_del in session.query(State).filter
-        (State.name.like('%a%')):
-            session.delete(state_to_del)
+        for s_to_del in session.query(State).filter(State.name.like('%a%')):
+            session.delete(s_to_del)
         session.commit()
         session.close()
     except:
