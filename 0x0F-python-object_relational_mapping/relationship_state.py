@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-File that contains the class definition of a State and
-an instance Base = declarative_base()
+State with relationship city
 """
 from sqlalchemy.orm import relationship
 from relationship_city import City, Base
