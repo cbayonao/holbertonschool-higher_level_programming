@@ -14,14 +14,13 @@ if __name__ == "__main__":
     from sqlalchemy.schema import Table
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+                           format(sys.argv[1], sys.argv[2],
+                                  sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     session = Session(engine)
     n_city = City(name='San Francisco')
-    n_state = State(name='California')
-    n_state.cities.append(n_city)
-    session.add_all([n_state, n_city])
+    new = State(name='California')
+    new.cities.append(n_city)
+    session.add_all([new, n_city])
     session.commit()
-    session.close()
