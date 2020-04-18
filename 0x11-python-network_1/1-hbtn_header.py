@@ -6,6 +6,7 @@ of the X-Request-Id variable found in the header
 of the response.
 """
 
+
 def displayXRequest():
     import urllib.request
     import sys
@@ -13,6 +14,7 @@ def displayXRequest():
     with urllib.request.urlopen(sys.argv[1]) as r:
         match = r.headers.get('X-Request-Id')
         print(match)
+
 
 if __name__ == "__main__":
     displayXRequest()
