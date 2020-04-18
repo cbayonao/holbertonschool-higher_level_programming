@@ -3,10 +3,11 @@
 Python script that fetches URL
 """
 
+
 def fetch():
     import urllib.request
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as respuesta:
-        html = respuesta.read()
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as r:
+        html = r.read()
         print('Body response:')
         print('\t- type: {}'.format(type(html)))
         print('\t- content: {}'.format(html))
