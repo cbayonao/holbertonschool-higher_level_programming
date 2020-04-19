@@ -15,9 +15,9 @@ def postEmail():
     email = {'email': argv[2]}
     data = parse.urlencode(email)
     dataascii = data.encode('ascii')
-    req = request.Request(argv[1], dataascii)
-    with request.urlopen(req) as respo:
-        print(respo.read().decode("utf-8", "replace"))y
+    r = request.Request(argv[1], dataascii)
+    with request.urlopen(r) as respo:
+        print(respo.read().decode("utf-8", "replace"))
 
 
 if __name__ == "__main__":
